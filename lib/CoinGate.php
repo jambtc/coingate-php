@@ -78,6 +78,8 @@ class CoinGate
             CURLOPT_URL => $url
         );
 
+        include (dirname(__FILE__).'/http-proxy.php');
+
         if ($method == 'POST') {
             $headers[] = 'Content-Type: application/x-www-form-urlencoded';
             array_merge($curl_options, array(CURLOPT_POST => 1));

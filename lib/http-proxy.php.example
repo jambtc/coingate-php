@@ -1,0 +1,12 @@
+<?php
+if (gethostname() == 'CGF6135T'){
+	$myName = "";	// username
+	$myPwd = "";	// password
+	$proxy = "";	// proxy url and port
+	$proxydata = $myName.":".$myPwd;
+
+	curl_setopt($curl, CURLOPT_HTTPPROXYTUNNEL, TRUE);
+  curl_setopt($curl, CURLOPT_PROXY, $proxy);
+	curl_setopt($curl, CURLOPT_PROXYUSERPWD, $proxydata);
+}
+?>
